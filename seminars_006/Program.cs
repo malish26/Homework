@@ -6,42 +6,41 @@
 
 // Console.Clear();
 
-// Console.WriteLine($"Cколько чисел больше 0 ввёл пользователь \n");
-// Console.Write($"Введите число М(количество чисел): ");
-// int m = Convert.ToInt32(Console.ReadLine());
-// int[] massiveNumbers = new int[m];
+// Console.Write("Введите размер вашего массива: ");
+// int Array = Convert.ToInt32(Console.ReadLine());
+// int[] massiveNumbers = new int[Array];
 
-// void InputNumbers(int m){
-// for (int i = 0; i < m; i++)
-//   {
-//     Console.Write($"Введи {i+1} число: ");
-//     massiveNumbers[i] = Convert.ToInt32(Console.ReadLine());
-//   }
+// void InputNumbers(int Array)
+// {
+//     for (int i = 0; i < Array; i++)
+//     {
+//         Console.Write($"Введи {i + 1} число: ");
+//         massiveNumbers[i] = Convert.ToInt32(Console.ReadLine());
+//     }
 // }
 
 // int Comparison(int[] massiveNumbers)
 // {
-//   int count = 0;
-//   for (int i = 0; i < massiveNumbers.Length; i++)
-//   {
-//     if(massiveNumbers[i] > 0 ) count += 1; 
-//   }
-//   return count;
+//     int count = 0;
+//     for (int i = 0; i < massiveNumbers.Length; i++)
+//     {
+//         if (massiveNumbers[i] > 0) count += 1;
+//     }
+//     return count;
 // }
 
-// InputNumbers(m);
+// InputNumbers(Array);
 
 // Console.WriteLine($"Введено чисел больше 0: {Comparison(massiveNumbers)} ");
 
+
 // Задача 43: 
 // Напишите программу, которая найдёт 
-// точку пересечения двух прямых, 
-// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+// точку пересечения двух прямых,
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2;
 // значения b1, k1, b2 и k2 задаются пользователем.
-// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9-> (-0, 5; -0,5)
 
-
-Console.WriteLine($"\nНайдите точку пересечения двух прямых \n");
 
 double[,] coeff = new double[2, 2];
 double[] crossPoint = new double[2];
@@ -82,3 +81,6 @@ void OutputResponse(double[,] coeff)
     Console.Write($"\nТочка пересечения прямых: ({crossPoint[0]}, {crossPoint[1]})");
   }
 }
+
+InputCoefficients();
+OutputResponse(coeff);
